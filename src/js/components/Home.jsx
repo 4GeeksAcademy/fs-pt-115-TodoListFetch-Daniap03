@@ -22,7 +22,7 @@ const Home = () => {
 	}
 
 	const getTareas = async () => {
-		const response = await fetch ("https://playground.4geeks.com/todo/users/antonia")
+		const response = await fetch ("https://playground.4geeks.com/todo/users/dani")
 		if(!response.ok){
 			console.log("hay que crear un usuario");
 			crearUsuario()
@@ -33,7 +33,7 @@ const Home = () => {
 	}
 
 	const crearUsuario = async () => {
-		const response = await fetch ("https://playground.4geeks.com/todo/users/antonia",{
+		const response = await fetch ("https://playground.4geeks.com/todo/users/dani",{
 		method: "POST"
 	})
 		const data = await response.json()
@@ -41,7 +41,7 @@ const Home = () => {
 	}
 
 	const crearTarea = async (tarea) => {
-	const response = await fetch ("https://playground.4geeks.com/todo/todos/antonia",{
+	const response = await fetch ("https://playground.4geeks.com/todo/todos/dani",{
 		method:"POST",
 		headers:{
 			"Content-Type": "application/json"
